@@ -1,0 +1,34 @@
+.input-box{
+    display: inline-block;
+    height: 16vw;
+    background: #00c0ef;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    /*width:40vw;*/
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.data-box{
+    display: inline-block;
+    height: 16vw;
+    background: #ff8c00;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    /*width:40vw;*/
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+span.layout{
+    font-size: 8vw;
+    margin-right: 6%;
+    margin-left: 22%;
+    padding: 2vw;
+}
+span.white{
+    color: #ffffff;
+}
+p.layout{
+    font-size: 2vw;
+    color: #ffffff;
+    text-align: center;
+}
