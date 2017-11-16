@@ -1,0 +1,27 @@
+.box1{
+	text-align: center;
+	width: 45%;
+	float: left;
+	/*background: #ff7f50;*/
+}
+.box2{
+	text-align: center;
+	width: 45%;
+	float: right;
+	/*background: #4682b4;*/
+}
+.box3{
+	float:left;
+	width: 100%;
+	/*background:#ff0000;*/
+}
+span.layout{
+	font-size: 4vw;
+	text-align: center;
+	margin-left: 30%;
+	margin-top: 10%;
+	color: #191970;
+}
+.color:hover{
+	background: #87cefa;
+}
