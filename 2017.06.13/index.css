@@ -1,0 +1,32 @@
+.input-box{
+    display: inline-block;
+    height: 30vw;
+    background: #00c0ef;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    /*width:40vw;*/
+    margin-top: 10%;
+}
+.data-box{
+    display: inline-block;
+    height: 30vw;
+    background: #ff8c00;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    /*width:40vw;*/
+    margin-top: 10%;
+}
+span.layout{
+    font-size: 12vw;
+    margin-right: 10%;
+    margin-left: 12%;
+    padding: 5vw;
+}
+span.white{
+    color: #ffffff;
+}
+p.layout{
+    font-size: 4vw;
+    color: #ffffff;
+    text-align: center;
+}
