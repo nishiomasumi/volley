@@ -19,41 +19,46 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $team ) {
 <html lang="ja">
 	<head>
 	<meta charset="UTF-8"/>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="index.css" rel="stylesheet">
+		<!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 		<title>Volley Analysis</title>
 	</head>
 	<body>
+		<header class="main-header sticky">
+			<div id="container">
+			<a href="index.php">
+				<div id="itemA">
+					<div class="pen-title-text">
+					<img src="volleyball.svg" id="volleyball" width="60" height="60">
+					<h1 class="textstyle">Volley Analysis</h1>
+					</div>
+				</div>
+			</a>
+			<div id="itemB">
+					<button type="button" class="menu-btn">ログイン</button>
+					<button type="button" class="menu-btn">ログアウト</button>
+					<button type="button" class="menu-btn">アカウント登録</button>
+			</div>
+		</header>
 		<div class="container">
-		<nav class="navbar navbar-right">
-  		<ul class="nav navbar-nav">
-  			<li class="active"><a href="#">HOME</a></li>
- 			<li><a href="#">SERVICE</a></li>
-  			<li><a href="#">BLOG</a></li>
-  			<li><a href="#">ABOUT</a></li>
-  			<li><a href="#">ABOUT</a></li>
-  		</ul>
-		</nav>
-	    <div class="box1">
-		<h1>Volley Analysis</h1>
-        </div>
 		<div class="row">
+			<div class="list-group">
         	<ul style="list-style-type:none; padding-left: 1em;">
             <?php foreach($teams as $team): ?>
                 <li class='article'>
-           			<a href="./team.php?id=<?php echo $team['id'];?>">
+           			<a href="./team.php?id=<?php echo $team['id'];?>" class="list-group-item">
            				<?php echo h($team['name']); ?>
            			</a>
-                    <hr>
                 </li>
             <?php endforeach; ?>
         	</ul>
+        	</div>
     	</div>
 
 		<a href="team_register.php">
-		<button type="button" class="btn btn-info btn-lg layout">
-			<span class="glyphicon glyphicon-edit layout">
+		<button type="button" class="btn btn-info btn-lg">
+			<span class="glyphicon glyphicon-edit">
 			</span>
 			チームを新規作成
 		</button>

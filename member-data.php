@@ -28,8 +28,7 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
         <meta charset="UTF-8"/>
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
             <link href="member-data.css" rel="stylesheet">
-            <link href="css/bootstrap.min.css" rel="stylesheet">
-            <link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="index.css" rel="stylesheet">
             <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
             <script src="./js/bootstrap.min.js"></script>
             <title>メンバーデータ</title>
@@ -99,6 +98,22 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
     </head>
 
     <body>
+        <header class="main-header sticky">
+            <div id="container">
+            <a href="index.php">
+                <div id="itemA">
+                    <div class="pen-title-text">
+                    <img src="volleyball.svg" id="volleyball" width="60" height="60">
+                    <h1 class="textstyle">Volley Analysis</h1>
+                    </div>
+                </div>
+            </a>
+            <div id="itemB">
+                    <button type="button" class="menu-btn">ログイン</button>
+                    <button type="button" class="menu-btn">ログアウト</button>
+                    <button type="button" class="menu-btn">アカウント登録</button>
+            </div>
+        </header>
         <div class="container">
         <form name="form">
             <div class="box1">

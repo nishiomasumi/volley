@@ -30,12 +30,29 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
 <html lang="ja">
 	<head>
 	<meta charset="UTF-8"/>
+		<link href="index.css" rel="stylesheet">
 		<link href="team.css" rel="stylesheet">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 		<title><?php echo h($team['name']); ?></title>
 	</head>
 	<body>
+	<header class="main-header sticky">
+			<div id="container">
+			<a href="index.php">
+				<div id="itemA">
+					<div class="pen-title-text">
+					<img src="volleyball.svg" id="volleyball" width="60" height="60">
+					<h1 class="textstyle">Volley Analysis</h1>
+					</div>
+				</div>
+			</a>
+			<div id="itemB">
+					<button type="button" class="menu-btn">ログイン</button>
+					<button type="button" class="menu-btn">ログアウト</button>
+					<button type="button" class="menu-btn">アカウント登録</button>
+			</div>
+		</header>
 	<div class="container">
 		<h1><?php echo h($team['name']); ?></h1>
 		<hr>

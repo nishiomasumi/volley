@@ -1,11 +1,52 @@
-.box1{
-	background-color: #ff69b4;
-	height: 10vh;
-	padding: 2%;
+html, body{
+    margin: 0;         /* 余白の削除 */
+    padding: 0;        /* 余白の削除 */
+    width:100%;
+    height:100%;
 }
-button.layout{
-    color:#ffffff;
+.main-header{
+	top: 0px;                   /* 位置(上0px) */
+    left: 0px;                  /* 位置(右0px) */
+    width: 100%;                /* 横幅100%　*/
+    height: 140px;              /* 縦幅140px */
 }
-span.layout{
-    color: #ffffff;
+#itemA{
+	width: 50%;
+	height: 100px;
+	float: left;
+	background-color: #191970;
+}
+#volleyball{
+	float: left;
+	margin: 20px 20px 0px 15px;
+}
+.textstyle{
+	float: left;
+	color: #ffffff;
+	margin: 30px 0px;
+}
+#itemB{
+	width: 50%;
+	height: 100px;
+	float:left;
+	background-color: #191970; 
+	text-align: right;
+}
+.menu-btn{
+	background-color: transparent;
+  	border: 2px solid #fff;
+  	color: #fff;
+  	border-radius: 6px;
+  	font-size: 15px;
+  	line-height: 40px;
+  	margin: 25px 25px 2px 2px;
+}
+.menu-btn:hover {
+  background-color: rgba(255, 255, 255, .2);
+}
+.sticky {
+    position: -webkit-sticky; /* Safari用 */
+    position:sticky; /* 要素をスクロールに応じて固定 */
+    top:0; /* 縦スクロールに追従 */
+    z-index: 100; /* z-indexで最前面に持ってくる */
 }
