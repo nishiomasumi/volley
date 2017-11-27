@@ -16,7 +16,7 @@
 .ca-menu li{
     width: 230px;
     height: 230px;
-    border: 10px solid #f6f6f6;
+    border: 10px solid #191970;
     overflow: hidden;
     position: relative;
     float:left;
@@ -42,13 +42,13 @@
     width: 100%;
     height: 100%;
     display: block;
-    color: #333;
+    color: #191970;
     position: relative;
 }
 .ca-icon{
     font-family: 'WebSymbolsRegular', cursive;
     font-size: 40px;
-    color: #87cefa;
+    color: #191970;
     line-height: 60px;
     position: absolute;
     width: 100%;
@@ -72,12 +72,12 @@
     margin-left: -85px;
     opacity: 0.8;
     text-align: center;
-    color: #555;
+    color: #191970;
 }
 .ca-sub{
     display: none;
 }
-.ca-menu li:hover{
+/*.ca-menu li:hover{
     border-color: #191970;
     z-index: 999;
     -webkit-transform: scale(1.1);
@@ -99,7 +99,7 @@
     -webkit-animation: moveFromBottom 500ms ease;
     -moz-animation: moveFromBottom 500ms ease;
     -ms-animation: moveFromBottom 500ms ease;
-}
+}*/
 
 @-webkit-keyframes moveFromBottom {
     from {
