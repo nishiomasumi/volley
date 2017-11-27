@@ -15,6 +15,22 @@ function connectDB()
     return $db;
 }
 
+// ログインしていなかったらログインページへリダイレクトする
+function redirectIfNotLogin()
+{
+    // ログインしてなかったら
+    if (!isset($_SESSION['user'])) {
+        // ログインページヘリダイレクトする
+        header('Location: login.php');
+        return;
+    }
+}
+
+// ログインしているユーザーの情報を取得する
+function loginUser()
+{
+    return $_SESSION['user'];
+}
 // ユーザーから入力された文字を安全な文字列に変換する(HTMLエスケープ)
 function h($string) {
     return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');

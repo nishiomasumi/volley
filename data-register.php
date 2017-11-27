@@ -3,7 +3,7 @@ require_once('./functions.php');
 session_start();
 
 $id = $_GET['id'];
-
+redirectIfNotLogin(); 
 // DB接続
 $db = connectDB(); // ※ この関数はfunctions.phpに定義してある
 $sql1 = "SELECT * FROM members WHERE team_id = $id ORDER BY play_number";
@@ -246,6 +246,7 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
                 <button id="out2" type="button" class="btn btn-default layout5 tobtn" name="out2" onclick="setPosition('out2'), send()"></button>
         </form>
         </div>        
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>

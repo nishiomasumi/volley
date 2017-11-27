@@ -30,11 +30,17 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
 <html lang="ja">
 	<head>
 	<meta charset="UTF-8"/>
-		<link href="index.css" rel="stylesheet">
 		<link href="team.css" rel="stylesheet">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="style9.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 		<title><?php echo h($team['name']); ?></title>
+		<style type="text/css">
+
+            body {
+                background-color: #ffdc00;
+            }
+
+        </style>
 	</head>
 	<body>
 	<header class="main-header sticky">
@@ -48,17 +54,59 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
 				</div>
 			</a>
 			<div id="itemB">
-					<button type="button" class="menu-btn">ログイン</button>
-					<button type="button" class="menu-btn">ログアウト</button>
-					<button type="button" class="menu-btn">アカウント登録</button>
+				<nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li><button class="menu-btn" onclick="location.href='index.php'">トップページ</button></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle dropdown-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo h(loginUser()['username']); ?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./logout.php">ログアウト</a></li>
+                                <li><a href="./mypage.php">マイページ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
 			</div>
 		</header>
 	<div class="container">
 		<h1><?php echo h($team['name']); ?></h1>
-		<hr>
 		<div class="container-fluid">
 				<div class="row">
-					<a href="data-register.php?id=<?php echo $team['id'];?>">
+					<ul class="ca-menu">
+                    <li>
+                        <a href="data-register.php?id=<?php echo $team['id'];?>">
+                            <span class="ca-icon">A</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">データ入力</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="data.php?id=<?php echo $team['id'];?>">
+                            <span class="ca-icon">I</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">データを見る</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="team_register.php?=<?php echo $team['id'];?>">
+                            <span class="ca-icon">C</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">チーム編集</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="member_register.php?=<?php echo $team['id'];?>">
+                            <span class="ca-icon">S</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">メンバー編集</h2>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+					<!--<a href="data-register.php?id=<?php echo $team['id'];?>">
 						<div class="col-lg-3 col-lg-offset-2 input-box">
 							<span class="glyphicon glyphicon-edit layout white">
 							</span>
@@ -71,24 +119,21 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
 							</span>
 							<p class="layout">データを見る</p>
 						</div>
-					</a>
+					</a>-->
 				</div>
 		</div>
-		<hr>
+		<!-- style="list-style-type:none; padding-left: 1em;"-->
 		<h2>メンバー</h2>
-
-		<div class="row">
-        	<ul style="list-style-type:none; padding-left: 1em;">
+		<div id="member-list">
+        	<ul id="member-ul">
             <?php foreach($members as $member): ?>
-                <li class='article'>
-           				<p>背番号：<?php echo h($member['play_number']); ?>
-           				　　　名前：<?php echo h($member['nickname']); ?></p>
-                    <hr>
+                <li class="style">
+           				背番号：<?php echo h($member['play_number']); ?>
+           				　　　名前：<?php echo h($member['nickname']); ?>
                 </li>
             <?php endforeach; ?>
         	</ul>
-    	</div>
-
+        </div>
 
 		<a href="./member_register.php?id=<?php echo $team['id']; ?>">
 		<button type="button" class="btn btn-info btn-lg article">
@@ -98,5 +143,7 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
 		</button>
         </a>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 	</body>
 </html>

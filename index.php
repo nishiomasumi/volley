@@ -23,6 +23,13 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $team ) {
 		<!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 		<title>Volley Analysis</title>
+		<style type="text/css">
+
+            body {
+                background-color: #ffdc00;
+            }
+
+        </style>
 	</head>
 	<body>
 		<header class="main-header sticky">
@@ -36,9 +43,18 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $team ) {
 				</div>
 			</a>
 			<div id="itemB">
-					<button type="button" class="menu-btn">ログイン</button>
-					<button type="button" class="menu-btn">ログアウト</button>
-					<button type="button" class="menu-btn">アカウント登録</button>
+				<nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li><button class="menu-btn" onclick="location.href='index.php'">トップページ</button></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle dropdown-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo h(loginUser()['username']); ?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./logout.php">ログアウト</a></li>
+                                <li><a href="./mypage.php">マイページ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
 			</div>
 		</header>
 		<div class="container">
@@ -64,5 +80,7 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $team ) {
 		</button>
 		</a>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>

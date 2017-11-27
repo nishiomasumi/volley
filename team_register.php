@@ -43,17 +43,57 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html lang="ja">
 	<head>
 	<meta charset="UTF-8"/>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="team-register.css" rel="stylesheet">
+		<!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 		<title>チーム新規作成</title>
+        <style type="text/css">
+
+            body {
+                background-color: #191970;
+            }
+
+        </style>
 	</head>
 	<body>
-        <div class="container">
-		<h1>チーム新規作成</h1>
-		<form action="" method="post">
-			<input type="text" name="name" class="form-control1" id="teamname" placeholder="チーム名"><br>
-			<input type="submit" class="btn btn-info btn-lg" value="登録">
-		</form>
+        <header class="main-header sticky">
+            <div id="container">
+            <a href="index.php">
+                <div id="itemA">
+                    <div class="pen-title-text">
+                    <img src="volleyball.svg" id="volleyball" width="60" height="60">
+                    <h1 class="textstyle">Volley Analysis</h1>
+                    </div>
+                </div>
+            </a>
+            <div id="itemB">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li><button class="menu-btn" onclick="location.href='index.php'">トップページ</button></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle dropdown-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo h(loginUser()['username']); ?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./logout.php">ログアウト</a></li>
+                                <li><a href="./mypage.php">マイページ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            </div>
+        </header>
+        <div class="boxWrap">
+            <div class="box">
+		      <form action="" method="post" id="form">
+                <h1 id="color">チーム新規作成</h1>
+                <div align="center">
+			     <input type="text" name="name" class="formstyle" id="teamname" placeholder="チーム名">
+                </div>
+			     <input type="submit" class="menu-btn" value=" 登録 ">
+		      </form>
+            </div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 	</body>
 </html>

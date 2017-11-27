@@ -87,6 +87,13 @@ $jsontest4 = json_encode($spikescores);
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 		<title><?php echo h($team['name']); ?></title>
+        <style type="text/css">
+
+            body {
+                background-color: #ffdc00;
+            }
+
+        </style>
 </head>
 	<body>
     <header class="main-header sticky">
@@ -107,7 +114,6 @@ $jsontest4 = json_encode($spikescores);
     </header>   
 	<div class="container">
 		<h1><?php echo h($team['name']); ?></h1>
-        <hr>
 		<div class="box1">
 		<h2>サーブ得点率</h2>
 		<canvas id="graph-serve"></canvas>
