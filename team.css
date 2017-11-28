@@ -12,12 +12,13 @@
 }
 #volleyball{
     float: left;
-    margin: 20px 20px 0px 15px;
+    margin: 20px 20px 0px 50px;
 }
 .textstyle{
     float: left;
     color: #ffdc00;
     margin: 30px 0px;
+  font-size: 3.5rem;
 }
 #itemB{
     width: 50%;
@@ -28,8 +29,8 @@
 }
 .menu-btn{
     background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid #ffdc00;
+    color: #ffdc00;
     border-radius: 6px;
     font-size: 15px;
     line-height: 40px;
@@ -37,11 +38,11 @@
 }
 .dropdown-btn{
     background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid #ffdc00;
+    color: #ffdc00;
     border-radius: 6px;
     font-size: 15px;
-    margin: 25px 25px 2px 2px;
+    margin: 25px 90px 20px 5px;
 }
 .dropdown-btn:hover{
      background-color: rgba(255, 255, 255, .2);

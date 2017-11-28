@@ -44,19 +44,21 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
 	</head>
 	<body>
 	<header class="main-header sticky">
-			<div id="container">
-			<a href="index.php">
-				<div id="itemA">
-					<div class="pen-title-text">
-					<img src="volleyball.svg" id="volleyball" width="60" height="60">
-					<h1 class="textstyle">Volley Analysis</h1>
-					</div>
-				</div>
-			</a>
-			<div id="itemB">
-				<nav>
-                    <ul class="nav nav-pills pull-right">
-                        <li><button class="menu-btn" onclick="location.href='index.php'">トップページ</button></li>
+            <div id="container">
+            <a href="index.php">
+                <div id="itemA">
+                    <div class="pen-title-text">
+                    <img src="volleyball.svg" id="volleyball" width="60" height="60">
+                    <h1 class="textstyle">Volley Analysis</h1>
+                    </div>
+                </div>
+            </a>
+            <div id="itemB">
+                <nav>
+                     <ul class="nav nav-pills pull-right">
+                    <li><button class="menu-btn" onclick="location.href='index.php'"><span class="glyphicon glyphicon-home">
+            </span> TOP</button></li>
+                    <li><button class="menu-btn" onclick="location.href='login.php'">ログイン</button></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle dropdown-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo h(loginUser()['username']); ?> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -66,8 +68,8 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
                         </li>
                     </ul>
                 </nav>
-			</div>
-		</header>
+            </div>
+        </header>
 	<div class="container">
 		<h1><?php echo h($team['name']); ?></h1>
 		<div class="container-fluid">

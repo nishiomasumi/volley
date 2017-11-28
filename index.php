@@ -44,8 +44,10 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $team ) {
 			</a>
 			<div id="itemB">
 				<nav>
-					<li><button class="menu-btn" onclick="location.href='index.php'">トップページ</button></li>
-                    <ul class="nav nav-pills pull-right">
+					 <ul class="nav nav-pills pull-right">
+					<li><button class="menu-btn" onclick="location.href='index.php'"><span class="glyphicon glyphicon-home">
+			</span> TOP</button></li>
+					<li><button class="menu-btn" onclick="location.href='login.php'">ログイン</button></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle dropdown-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo h(loginUser()['username']); ?> <span class="caret"></span></a>
                             <ul class="dropdown-menu">

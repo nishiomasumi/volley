@@ -9,18 +9,16 @@
   height: 100px;
   float: left;
   background-color: #ffdc00;
-  display: flex;
-  align-items: center;
-  justify-content: left;
 }
 #volleyball{
   float: left;
-  margin: 20px 20px 0px 15px;
+  margin: 20px 20px 0px 50px;
 }
 .textstyle{
   float: left;
   color: #191970;
   margin: 30px 0px;
+  font-size: 3.5rem;
 }
 #itemB{
   width: 50%;
@@ -38,19 +36,19 @@
     line-height: 40px;
     margin: 25px 25px 2px 2px;
 }
-.menu-btn:hover {
-  background-color: rgba(255, 255, 255, .2);
-}
 .dropdown-btn{
   background-color: transparent;
     border: 2px solid #191970;
     color: #191970;
     border-radius: 6px;
     font-size: 15px;
-    margin: 25px 25px 2px 2px;
+    margin: 25px 90px 20px 5px;
 }
 .dropdown-btn:hover{
    background-color: rgba(255, 255, 255, .2);
+}
+.menu-btn:hover {
+  background-color: rgba(255, 255, 255, .2);
 }
 .sticky {
     position: -webkit-sticky; /* Safari用 */

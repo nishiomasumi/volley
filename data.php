@@ -87,13 +87,13 @@ $jsontest4 = json_encode($spikescores);
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 		<title><?php echo h($team['name']); ?></title>
-        <style type="text/css">
+        <!--<style type="text/css">
 
             body {
                 background-color: #ffdc00;
             }
 
-        </style>
+        </style>-->
 </head>
 	<body>
     <header class="main-header sticky">
@@ -107,11 +107,22 @@ $jsontest4 = json_encode($spikescores);
                 </div>
             </a>
             <div id="itemB">
-                    <button type="button" class="menu-btn">ログイン</button>
-                    <button type="button" class="menu-btn">ログアウト</button>
-                    <button type="button" class="menu-btn">アカウント登録</button>
+                <nav>
+                     <ul class="nav nav-pills pull-right">
+                    <li><button class="menu-btn" onclick="location.href='index.php'"><span class="glyphicon glyphicon-home">
+            </span> TOP</button></li>
+                    <li><button class="menu-btn" onclick="location.href='login.php'">ログイン</button></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle dropdown-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo h(loginUser()['username']); ?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./logout.php">ログアウト</a></li>
+                                <li><a href="./mypage.php">マイページ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-    </header>   
+        </header>
 	<div class="container">
 		<h1><?php echo h($team['name']); ?></h1>
 		<div class="box1">

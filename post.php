@@ -14,10 +14,11 @@ $member_id = $_POST['member_id'];
 $attack_from = $_POST['attack_from'];
 $attack_to = $_POST['attack_to'];
 $scored = $_POST['scored'];
+$login_id = $_POST['login_id'];
 
 $db = connectDb();  // ※ この関数はfunctions.phpに定義してある
     
-    $sql = "INSERT INTO data(team_id, member_id, type, attack_from, attack_to, scored) VALUES('$id', :member_id, :type, :attack_from, :attack_to, :scored)";
+    $sql = "INSERT INTO data(team_id, member_id, type, attack_from, attack_to, scored,login_id) VALUES('$id', :member_id, :type, :attack_from, :attack_to, :scored, :login_id)";
     $statement = $db->prepare($sql);
     $result = $statement->execute([
         ':member_id' => $member_id,
@@ -25,6 +26,7 @@ $db = connectDb();  // ※ この関数はfunctions.phpに定義してある
         ':attack_from' => $attack_from,
         ':attack_to' => $attack_to,
         ':scored' => $scored,
+        ':login_id' => $login_id,
     ]);
     if (!$result) {
         die('Database Error');
