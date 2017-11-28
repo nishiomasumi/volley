@@ -1,7 +1,7 @@
 <?php
 require_once('./functions.php');
 session_start();
-redirectIfNotLogin();
+
 $id = $_GET['id'];
 
 // DB接続
@@ -20,7 +20,7 @@ $sql2 = 'SELECT * FROM teams WHERE id = :id';
 $statement2 = $db->prepare($sql2);
 $statement2->execute(['id' => $_GET['id']]);
 $team = $statement2->fetch(PDO::FETCH_ASSOC);
-$login_id = json_encode(loginUser()['id']);
+$login_id = loginUser()['id'];
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -28,17 +28,18 @@ $login_id = json_encode(loginUser()['id']);
         <meta charset="UTF-8"/>
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
             <link href="data-register.css" rel="stylesheet">
-            <link href="css/bootstrap.min.css" rel="stylesheet">
-            <link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="index.css" rel="stylesheet">
+            <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
             <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
             <script src="./js/bootstrap.min.js"></script>
             <title>データ入力</title>
             <script>
             	var data = {};
                 var clicked = false;    // クリック状態を保持するフラグ
-                var login_id = JSON.parse(<?php echo  $login_id; ?>);
+                var login_id = <?php echo json_encode($login_id); ?>;
                 function setType(type){
                     data['type'] = type;
+                    data['login_id'] = login_id;
                     console.log(data);
 
                     // ボタンの色を戻す
@@ -119,7 +120,6 @@ $login_id = json_encode(loginUser()['id']);
                     if (clicked) {
                         //alert("double click!!");
                         data['scored'] = 1;
-                        data['login_id'] = login_id;
                         clicked = false;
                         console.log(data);
                         $.ajax({
@@ -146,7 +146,6 @@ $login_id = json_encode(loginUser()['id']);
                     if (clicked) {
                         //alert("single click!");
                         data['scored'] = 0;
-                        data['login_id'] = login_id;
                         console.log(data);
                         $.ajax({
                         type: "POST",
@@ -171,6 +170,33 @@ $login_id = json_encode(loginUser()['id']);
     </head>
 
     <body>
+        <header class="main-header sticky">
+            <div id="container">
+            <a href="index.php">
+                <div id="itemA">
+                    <div class="pen-title-text">
+                    <img src="volleyball.svg" id="volleyball" width="60" height="60">
+                    <h1 class="textstyle">Volley Analysis</h1>
+                    </div>
+                </div>
+            </a>
+            <div id="itemB">
+                <nav>
+                     <ul class="nav nav-pills pull-right">
+                    <li><button class="menu-btn" onclick="location.href='index.php'"><span class="glyphicon glyphicon-home">
+            </span> TOP</button></li>
+                    <li><button class="menu-btn" onclick="location.href='login.php'">ログイン</button></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle dropdown-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo h(loginUser()['username']); ?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./logout.php">ログアウト</a></li>
+                                <li><a href="./mypage.php">マイページ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <div class="container">
         <form name="form">
             <div class="box1">
@@ -201,9 +227,6 @@ $login_id = json_encode(loginUser()['id']);
             <a href="./delete.php?id=<?php echo $team['id'];?>">
             <button type="button" class="btn btn-warning btn-lg layout1">修正</button></a>
 
-            <a href="./team.php?id=<?php echo $team['id'];?>">
-            <button type="button" class="btn btn-danger btn-lg layout1">終了</button>
-            </a>
             </div>
 
             <div class="box3-left">

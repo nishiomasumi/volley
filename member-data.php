@@ -139,9 +139,6 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
             </div>
 
             <div class="box4">
-            <a href="./team.php?id=<?php echo $team['id'];?>">
-            <button type="button" class="btn btn-danger btn-lg layout1">終了</button>
-            </a>
             </div>
 
             <div class="box3-left">
