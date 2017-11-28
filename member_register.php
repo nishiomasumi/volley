@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // セッションにメッセージを格納
     $_SESSION["success"] = "登録が完了しました。";
     // ログイン画面に遷移
-    header('Location: team.php?id=$id'); 
+    header("Location: team.php?id=$id"); 
 }   
 
 ?>
