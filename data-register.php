@@ -1,7 +1,7 @@
 <?php
 require_once('./functions.php');
 session_start();
-
+redirectIfNotLogin();
 $id = $_GET['id'];
 
 // DB接続
@@ -20,7 +20,7 @@ $sql2 = 'SELECT * FROM teams WHERE id = :id';
 $statement2 = $db->prepare($sql2);
 $statement2->execute(['id' => $_GET['id']]);
 $team = $statement2->fetch(PDO::FETCH_ASSOC);
-$login_id = loginUser()['id'];
+$login_id = json_encode(loginUser()['id']);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -36,7 +36,7 @@ $login_id = loginUser()['id'];
             <script>
             	var data = {};
                 var clicked = false;    // クリック状態を保持するフラグ
-                var login_id = <?php echo $login_id; ?>;
+                var login_id = JSON.parse(<?php echo  $login_id; ?>);
                 function setType(type){
                     data['type'] = type;
                     console.log(data);
