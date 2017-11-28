@@ -36,10 +36,9 @@ $login_id = loginUser()['id'];
             <script>
             	var data = {};
                 var clicked = false;    // クリック状態を保持するフラグ
-                var login_id = <?php echo json_encode($login_id); ?>;
+                var login_id = <?php echo $login_id; ?>;
                 function setType(type){
                     data['type'] = type;
-                    data['login_id'] = login_id;
                     console.log(data);
 
                     // ボタンの色を戻す
@@ -120,6 +119,7 @@ $login_id = loginUser()['id'];
                     if (clicked) {
                         //alert("double click!!");
                         data['scored'] = 1;
+                        data['login_id'] = login_id;
                         clicked = false;
                         console.log(data);
                         $.ajax({
@@ -146,6 +146,7 @@ $login_id = loginUser()['id'];
                     if (clicked) {
                         //alert("single click!");
                         data['scored'] = 0;
+                        data['login_id'] = login_id;
                         console.log(data);
                         $.ajax({
                         type: "POST",
