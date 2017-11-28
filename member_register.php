@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // 送られた値を変数に格納
     $play_number = $_POST['play_number'];
     $nickname = $_POST['nickname'];
-    $team_id = $_POST['$id'];
+    $team_id = $_GET['$id'];
    
  // 未入力の項目があるか
     /*if (empty($team_name)) {

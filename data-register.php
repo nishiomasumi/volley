@@ -117,7 +117,6 @@ $login_id = loginUser()['id'];
 
                 function send(){
                     if (clicked) {
-                        alert("double click!!");
                         data['scored'] = 1;
                         clicked = false;
                         console.log(data);
