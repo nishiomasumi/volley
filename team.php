@@ -92,7 +92,7 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
                         </a>
                     </li>
                     <li>
-                        <a href="team_register.php?=<?php echo $team['id'];?>">
+                        <a href="team_register.php?id=<?php echo $team['id'];?>">
                             <span class="ca-icon">C</span>
                             <div class="ca-content">
                                 <h2 class="ca-main">チーム編集</h2>
@@ -100,7 +100,7 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
                         </a>
                     </li>
                     <li>
-                        <a href="member_register.php?=<?php echo $team['id'];?>">
+                        <a href="member_register.php?id=<?php echo $team['id'];?>">
                             <span class="ca-icon">S</span>
                             <div class="ca-content">
                                 <h2 class="ca-main">メンバー編集</h2>
