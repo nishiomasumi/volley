@@ -39,32 +39,38 @@
 .panel1{
 	width: 9vw;
 	height: 9vw;
-	border: solid 2px #d3d3d3;
-	/*margin: 0.1vw;*/
+	border: solid 2px #000000;
 	display: inline-block;
 	float: center;
 	padding: 30px;
+	border-radius: 5px;
+	margin: 5px;
+	font-size: 36px;
 }
 .panel2{
 	width: 27vw;
 	height: 3vw;
-	border: solid 2px #d3d3d3;
-	margin-right: 4%;
-	margin-left: 4%;
+	border: solid 2px #000000;
+	margin-right: 6%;
+	margin-left: 6%;
+	border-radius: 5px;
+	margin-top: 5px;
 }
 .panel3{
 	width: 3vw;
 	height: 29vw;
-	border: solid 2px #d3d3d3;
+	border: solid 2px #000000;
 	margin-top: 9.5vw;
 	float: left;
+	border-radius: 5px;
 }
 .panel4{
 	width: 3vw;
 	height: 29vw;
-	border: solid 2px #d3d3d3;
+	border: solid 2px #000000;
 	margin-top: 9.5vw;
 	float: right;
+	border-radius: 5px;
 }
 
 button.layout1{
@@ -82,7 +88,7 @@ button.layout2:hover{
 button.layout3{
 	width: 9vw;
 	height: 9vw;
-	border: solid 2px #d3d3d3;
+	border: solid 2px #000000;
 	margin: 0.2vw;
 }
 button.layout3:hover{
@@ -91,7 +97,7 @@ button.layout3:hover{
 button.layout4{
 	width: 3vw;
 	height: 27vw;
-	border: solid 2px #d3d3d3;
+	border: solid 2px #000000;
 	margin-top: 9.5vw;
 	float: right;
 }
@@ -101,7 +107,7 @@ button.layout4:hover{
 button.layout5{
 	width: 3vw;
 	height: 27vw;
-	border: solid 2px #d3d3d3;
+	border: solid 2px #000000;
 	margin-top: 9.5vw;
 	float: left;
 }
@@ -112,7 +118,7 @@ button.layout5:hover{
 button.layout6{
 	width: 27vw;
 	height: 3vw;
-	border: solid 2px #d3d3d3;
+	border: solid 2px #000000;
 	margin: 2%;
 }
 button.layout6:hover{
@@ -126,7 +132,7 @@ button.layout6:hover{
   	height: 6vw;
   	line-height: 120px;
   	border-radius: 50%;
-  	border: solid 2px #d3d3d3;
+  	border: solid 2px #000000;
   	text-align: center;
   	vertical-align: middle;
   	overflow: hidden;

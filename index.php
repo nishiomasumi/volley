@@ -75,14 +75,9 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $team ) {
         	</ul>
         	</div>
     	<!--</div>-->
-
-		<!--<a href="team_register.php">
-		<button type="button" class="btn btn-info btn-lg">
-			<span class="glyphicon glyphicon-edit">
-			</span>
-			チームを新規作成
-		</button>
-		</a>-->
+    	<div id="center">
+		<a class="plus" href="team_register.php">＋<br></a>
+		</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>

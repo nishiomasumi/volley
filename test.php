@@ -11,11 +11,12 @@ $attack_from = $_POST['attack_from'];
 //$response = getScoredCount($member_id, $type, $attack_from, $position);
 
 $positions = array('al','ac','ar','fl','fc','fr','bl','bc','br');
+$login_id = loginUser()['id'];
 $counts = [];
 $colors = [];
 $datas = [];
 foreach($positions as $position){
-	$sql1 = "SELECT COUNT(*) FROM data WHERE member_id = '$member_id' AND type = '$type' AND attack_from = '$attack_from' AND attack_to = '$position'";
+	$sql1 = "SELECT COUNT(*) FROM data WHERE member_id = '$member_id' AND type = '$type' AND attack_from = '$attack_from' AND attack_to = '$position' AND login_id = '$login_id'";
 	$stmt1 = $db->query($sql1);
 	$count = $stmt1->fetchColumn();
     $counts[] = $count;

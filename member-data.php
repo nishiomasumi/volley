@@ -109,9 +109,20 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
                 </div>
             </a>
             <div id="itemB">
-                    <button type="button" class="menu-btn">ログイン</button>
-                    <button type="button" class="menu-btn">ログアウト</button>
-                    <button type="button" class="menu-btn">アカウント登録</button>
+                <nav>
+                     <ul class="nav nav-pills pull-right">
+                    <li><button class="menu-btn" onclick="location.href='index.php'"><span class="glyphicon glyphicon-home">
+            </span> TOP</button></li>
+                    <li><button class="menu-btn" onclick="location.href='login.php'">ログイン</button></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle dropdown-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo h(loginUser()['username']); ?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./logout.php">ログアウト</a></li>
+                                <li><a href="./mypage.php">マイページ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <div class="container">
@@ -134,7 +145,7 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
             </div>
 
             <div class="box3-left">
-               <div id ="out1" class="panel panel-default panel4 color" name="out1"></div> 
+               <div id ="out1" class="panel4 color" name="out1"></div> 
             </div>
 
             <div class="box3">
@@ -143,22 +154,22 @@ $team = $statement2->fetch(PDO::FETCH_ASSOC);
                 <a id="right" class="circle frombtn" name="right" onclick="setAttackPosition('right'), send()"></a>
                 <br>
                 
-                <div id ="al" class="panel panel-default panel1 color count" name="0"></div>
-                <div id ="ac" class="panel panel-default panel1 color count" name="1"></div>
-                <div id ="ar" class="panel panel-default panel1 color count" name="2"></div>
+                <div id ="al" class="panel1 color count" name="0"></div>
+                <div id ="ac" class="panel1 color count" name="1"></div>
+                <div id ="ar" class="panel1 color count" name="2"></div>
                 
-                <div id ="fl" class="panel panel-default panel1 color count" name="fl"></div>
-                <div id ="fc" class="panel panel-default panel1 color count" name="fc"></div>
-                <div id ="fr" class="panel panel-default panel1 color count" name="fr"></div>
+                <div id ="fl" class="panel1 color count" name="fl"></div>
+                <div id ="fc" class="panel1 color count" name="fc"></div>
+                <div id ="fr" class="panel1 color count" name="fr"></div>
                 
-                <div id ="bl" class="panel panel-default panel1 color count" name="bl"></div>
-                <div id ="bc" class="panel panel-default panel1 color count" name="bc"></div>
-                <div id ="br" class="panel panel-default panel1 color count" name="br"></div>
+                <div id ="bl" class="panel1 color count" name="bl"></div>
+                <div id ="bc" class="panel1 color count" name="bc"></div>
+                <div id ="br" class="panel1 color count" name="br"></div>
 
-                <div id ="out3" class="panel panel-default panel2 color" name="out3"></div>
+                <div id ="out3" class="panel2 color" name="out3"></div>
             </div>
             <div class="box3-right">
-                <div id ="out2" class="panel panel-default panel3 color" name="out2"></div>
+                <div id ="out2" class="panel3 color" name="out2"></div>
         </form>
         </div>        
 
