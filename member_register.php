@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // 送られた値を変数に格納
     $play_number = $_POST['play_number'];
     $nickname = $_POST['nickname'];
-    $team_id = $_GET['$id'];
+    $team_id = $_POST['$id'];
    
  // 未入力の項目があるか
     /*if (empty($team_name)) {
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // セッションにメッセージを格納
     $_SESSION["success"] = "登録が完了しました。";
     // ログイン画面に遷移
-    header("Location: team.php?id=$id"); 
+    header('Location: index.php'); 
 }   
 
 ?>
