@@ -117,6 +117,7 @@ $login_id = loginUser()['id'];
 
                 function send(){
                     if (clicked) {
+                        alert("double click!!");
                         data['scored'] = 1;
                         clicked = false;
                         console.log(data);
@@ -142,7 +143,7 @@ $login_id = loginUser()['id'];
                     // ダブルクリックによりclickedフラグがリセットされていない
                     //     -> シングルクリックだった
                     if (clicked) {
-                        //alert("single click!");
+                        alert("single click!");
                         data['scored'] = 0;
                         console.log(data);
                         $.ajax({
@@ -230,7 +231,7 @@ $login_id = loginUser()['id'];
             </a>-->
             </div>
             <div class="box3-left">
-                <button id ="out1" type="button" class="btn btn-default layout4" name="out1" onclick="setPosition('out1'), send(), loginUser()"></button>
+                <button id ="out1" type="button" class="btn btn-default layout4" name="out1" onclick="setPosition('out1'), send()"></button>
             </div>
 
             <div class="box3">
@@ -253,7 +254,7 @@ $login_id = loginUser()['id'];
                 <button id ="out3" type="button" class="btn btn-default layout6" name="out3" onclick="setPosition('out3'), send()"></button>
             </div>
             <div class="box3-right">
-                <button id="out2" type="button" class="btn btn-default layout5" name="out2" onclick="setPosition('out2'), send(), loginUser()"></button>
+                <button id="out2" type="button" class="btn btn-default layout5" name="out2" onclick="setPosition('out2'), send()"></button>
         </form>
         </div>        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
