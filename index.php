@@ -23,13 +23,13 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $team ) {
 		<!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 		<title>Volley Analysis</title>
-		<style type="text/css">
+		<!--<style type="text/css">
 
             body {
                 background-color: #ffdc00;
             }
 
-        </style>
+        </style>-->
 	</head>
 	<body>
 		<header class="main-header sticky">
@@ -44,8 +44,8 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $team ) {
 			</a>
 			<div id="itemB">
 				<nav>
+					<li><button class="menu-btn" onclick="location.href='index.php'">トップページ</button></li>
                     <ul class="nav nav-pills pull-right">
-                        <li><button class="menu-btn" onclick="location.href='index.php'">トップページ</button></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle dropdown-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo h(loginUser()['username']); ?> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -58,27 +58,29 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $team ) {
 			</div>
 		</header>
 		<div class="container">
-		<div class="row">
-			<div class="list-group">
+		<!--<div class="row">-->
+			<div id="nav">
         	<ul style="list-style-type:none; padding-left: 1em;">
             <?php foreach($teams as $team): ?>
-                <li class='article'>
-           			<a href="./team.php?id=<?php echo $team['id'];?>" class="list-group-item">
-           				<?php echo h($team['name']); ?>
-           			</a>
+                <li>
+           			<!--<a href="./team.php?id=<?php echo $team['id'];?>">-->
+           			<button class="index-btn" onclick="location.href='team.php?id=<?php echo $team['id'];?>'">
+       				<?php echo h($team['name']); ?>
+       				</button>
+           			<!--</a>-->
                 </li>
             <?php endforeach; ?>
         	</ul>
         	</div>
-    	</div>
+    	<!--</div>-->
 
-		<a href="team_register.php">
+		<!--<a href="team_register.php">
 		<button type="button" class="btn btn-info btn-lg">
 			<span class="glyphicon glyphicon-edit">
 			</span>
 			チームを新規作成
 		</button>
-		</a>
+		</a>-->
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
