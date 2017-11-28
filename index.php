@@ -23,13 +23,13 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $team ) {
 		<!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 		<title>Volley Analysis</title>
-		<!--<style type="text/css">
+		<style type="text/css">
 
             body {
                 background-color: #ffdc00;
             }
 
-        </style>-->
+        </style>
 	</head>
 	<body>
 		<header class="main-header sticky">
