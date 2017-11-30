@@ -79,10 +79,10 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $team ) {
     	<div id="center">
 		<a class="plus" href="team_register.php">＋<br></a>
 		</div>
-		<button class="btn btn-default" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLScERUClyJHePNdJrzBASOxHo9H0Pz1n_aqoYszbXsdqwqEAvg/viewform?usp=sf_link'">システムに関するアンケート</button>
+		<!--<button class="btn btn-default" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLScERUClyJHePNdJrzBASOxHo9H0Pz1n_aqoYszbXsdqwqEAvg/viewform?usp=sf_link'">システムに関するアンケート</button>
 		<button class="btn btn-default" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSc2rpKeUmKAeqd6otaj8IpaRWoX2PsWv86YwoBkUWYCPmJtoA/viewform?usp=sf_link'">記録用紙に関するアンケート</button>
 		<button class="btn btn-default" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSfuNfrd-dqUY36UeCPjEL4zibHnEClnm02X4smlhyrmJnAlug/viewform?usp=sf_link'">
-		比較アンケート</button>
+		比較アンケート</button>-->
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
